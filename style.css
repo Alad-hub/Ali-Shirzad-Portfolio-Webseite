@@ -191,6 +191,19 @@ summary {
 }
 
 
-@media screen and (max-wdith: 600px) {
-    td{font-size: 12px;}
+.lebenslauf{
+  max-width: 60%;
+  height: auto;
+}
+
+@media (min-width: 900px) {
+  .lebenslauf{
+    width: 60%;
   }
+}
+
+@media (max-width: 600px) {
+  .lebenslauf{
+    width: 80%;
+  }
+}
