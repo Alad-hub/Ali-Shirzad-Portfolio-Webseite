@@ -192,7 +192,7 @@ summary {
 
 
 .lebenslauf{
-  max-width: 60%;
+  max-width: auto;
   height: auto;
 }
 
@@ -204,6 +204,6 @@ summary {
 
 @media (max-width: 600px) {
   .lebenslauf{
-    width: 80%;
+    width: 90%;
   }
 }
