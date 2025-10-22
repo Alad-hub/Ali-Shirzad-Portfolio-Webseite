@@ -42,9 +42,6 @@ hr {
 	height: 2px; 
 	}
 
-.nav-btn:active {
-  color:white;
-}
 
 
 img {
@@ -73,7 +70,12 @@ summary {
   padding: 0px;
   border-radius:5px;
 	}
-  
+
+.boldcolor {
+  b{
+    color:#003366;
+  }
+}
 
 .nav-btn {
   background-color: white;
@@ -90,10 +92,10 @@ summary {
   background-color:  #46A3E3;
 	}
 
-  .nav-btn:visited {
-  color: red;
-  background-color: red;
+  .nav-btn:active {
+  color:white;
 }
+
 
 .navbar1 {
   font-size: large;
