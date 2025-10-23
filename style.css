@@ -221,18 +221,23 @@ summary {
 
 
 .lebenslauf{
-  max-width: 60%;
+  max-width: 70%;
+  width: auto;
   height: auto;
 }
 
-@media (min-width: 900px) {
+@media only screen and (max-width: 600px) {
   .lebenslauf{
-    width: 60%;
+    max-width: 90%;
+    width: auto;
+    height: auto;
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-width: 900px) {
   .lebenslauf{
-    width: 90%;
+    max-width: 50%;
+    width: auto;
+    height: auto;
   }
 }
