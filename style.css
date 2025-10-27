@@ -31,7 +31,7 @@ h2 {
   font-size: 1.6rem;
 	border-radius: 5px;
 	display: inline-block;
-	padding: 5px;
+	padding: 3px;
   background-color: #003366;
 	}
 
@@ -67,6 +67,8 @@ summary {
     color: #003366;
     font-size: 1.5rem;
     margin-left: 10px;
+    font-weight: bold;
+    
   }
 .summary:hover {
     cursor: pointer;
@@ -81,7 +83,19 @@ summary {
     margin-bottom: 20px;
    
   }
-
+  details{
+    h4{
+      
+      border:solid;
+      border-width: 4px;
+      border-color: #003366;
+      border-radius: 5px;
+      display: inline-block;
+      padding: 3px;
+      background-color: #003366;
+    }
+    
+  }
   .project_summary {
     background-color: #87CEFA;
     border-radius: 10px;
@@ -95,6 +109,16 @@ summary {
     img{
       max-width: 90%;
     }
+    h4{
+      margin-bottom: 5px;
+    }
+
+    hr{
+      margin-left: 2%;
+      margin-right: 2%;
+      background-color: #003366;
+    }
+  
   }
 
 .navbar {
@@ -234,7 +258,18 @@ summary {
     max-width: 90%;
     width: auto;
     height: auto;
+
+  
   }
+  .snakejpg{
+    img{
+    max-height: fit-content;}
+    }
+
+  .robotimg{
+    img{
+    max-height: fit-content;}
+    }
 }
 
 @media only screen and (min-width: 900px) {
