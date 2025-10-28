@@ -285,4 +285,9 @@ summary {
     width: auto;
     height: auto;
   }
+  .ball-pics{
+    img{
+      min-width:auto;
+    }
+  }
 }
