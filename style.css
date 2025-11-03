@@ -152,7 +152,7 @@ summary {
   background-color: white;
   color: #003366;
   border: none;
-  padding: 8px 15px;
+  padding: 8px 12px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
@@ -166,7 +166,16 @@ summary {
   .nav-btn:active {
   color:white;
 }
-
+.location{
+  color: white;
+}
+.location:hover{
+  
+  color: #003366;
+}
+.location:active{
+  color: white;
+}
 
 .navbar1 {
   font-size: large;
