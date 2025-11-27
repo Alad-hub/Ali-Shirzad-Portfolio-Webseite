@@ -128,6 +128,43 @@ summary {
   
   }
 
+.map{
+  img{
+    all: unset;
+  }
+
+}
+  
+
+.map, table, td{
+  width:fit-content;
+  border: black;
+  background-color: black;
+  padding: 2px;
+  margin:auto;
+  border-radius: 10px;
+
+  img{
+    width:50px;
+    height: 50px;
+  }
+}
+
+.buttons4{
+  text-align: center;
+  
+}
+.blauwinbtn {
+  color: blue;
+  border: solid 3px blue;
+}
+.rotwinbtn {
+  color: red;
+  border: solid 3px red;
+}
+
+
+
 .navbar {
   display: flex;
   justify-content: space-around;
