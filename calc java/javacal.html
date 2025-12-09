@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h2>JavaScript Taschenrechner</h2>
+    <table>
+        
+        <tr class="field">
+            <td colspan="4" id="ausgabe"></td>
+        </tr>
+        <div class="btns">
+    <tr>
+        <td id="operation" onclick="power(' **2 ')"> x²</td>
+        <td id="operation" onclick="power(' **0.5 ')"> √ </td>
+        <td id="clearausgabe" onclick="clearall()">CL</td>
+        <td id="löschenausgabe" onclick="löschen()">DEL</td>
+        
+    </tr>
+            
+    <tr>
+        <td onclick="eingabezahl(7)">7</td>
+        <td onclick="eingabezahl(8)">8</td>
+        <td onclick="eingabezahl(9)">9</td>
+        <td id="operation" onclick="eingabezahl(' * ')">×</td>
+    </tr>
+
+    <tr>
+        <td onclick="eingabezahl(4)">4</td>
+        <td onclick="eingabezahl(5)">5</td>
+        <td onclick="eingabezahl(6)">6</td>
+        <td id="operation" onclick="eingabezahl(' / ')">÷</td>
+    </tr>
+
+    <tr>
+        <td onclick="eingabezahl(1)">1</td>
+        <td onclick="eingabezahl(2)">2</td>
+        <td onclick="eingabezahl(3)">3</td>
+        <td id="operation" onclick="eingabezahl(' + ')">+</td>
+    </tr>
+   
+    <tr>
+        <td onclick="eingabezahl(0)">0</td>
+        <td onclick="eingabezahl('.')">•</td>
+        <td id="gleichausgabe" onclick="gleich(' = ')">=</td>
+        <td id="operation" onclick="eingabezahl(' - ')">-</td>
+    </tr>
+
+    </div>
+    
+    
+    </table>
+
+    
+
+   
+ 
+   
+
+    <script>
+       function eingabezahl(zahl){
+        document.getElementById('ausgabe').innerHTML += zahl;
+       }
+       function gleich(){
+        var berechnung = document.getElementById("ausgabe");
+        var ergebnis = eval(berechnung.innerHTML);
+        berechnung.innerHTML = ergebnis;
+       }
+
+       function power(op){
+        document.getElementById("ausgabe").innerHTML += op;
+        var berechnung1 = document.getElementById("ausgabe");
+        var ergebnis1 = eval(berechnung1.innerHTML);
+        berechnung1.innerHTML = ergebnis1;
+       }
+
+       function löschen(){
+        let container = document.getElementById("ausgabe");
+        if(container.innerHTML.endsWith('')){
+            container.innerHTML = container.innerHTML.slice(0,-1);
+        }
+       }
+
+
+       function clearall(){
+        document.getElementById("ausgabe").innerHTML = "";
+       }
+    </script>
+
+    
+</body>
+
+
+
+
+</html>
