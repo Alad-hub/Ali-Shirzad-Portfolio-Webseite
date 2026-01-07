@@ -75,9 +75,9 @@ summary {
     font-size: 1.5rem;
     margin-left: 10px;
     font-weight: bold;
-    
   }
-.summary:hover {
+  
+summary:hover {
     cursor: pointer;
     color: white;
   }
@@ -242,6 +242,7 @@ summary {
 .location:active{
   color: white;
 }
+
 
 .navbar1 {
   font-size: large;
