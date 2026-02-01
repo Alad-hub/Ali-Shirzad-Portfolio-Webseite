@@ -57,16 +57,13 @@ hr {
 
 
 img {
-	border: solid;
-	border-color: white;
-	border-width: 2px;
-	border-radius: 7px;
-  outline: solid #003366 4px;
+	border-radius: 5px;
+  border: solid #003366 4px;
   
 	}	
 
 p {
-	text-align: center;
+	
   font-size: 1rem;
 	}
 
@@ -75,8 +72,46 @@ summary {
     font-size: 1.5rem;
     margin-left: 10px;
     font-weight: bold;
+    
   }
-  
+
+
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+
+details > summary::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: url("img/dropdown.svg") no-repeat center;
+  background-size: contain;
+  transition: transform 0.2s ease;
+}
+
+
+details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+details {
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #87CEFA;
+}
+
+
+
 summary:hover {
     cursor: pointer;
     color: white;
@@ -104,7 +139,7 @@ summary:hover {
 
   }
   .project_summary {
-    background-color: #87CEFA;
+    
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
@@ -211,6 +246,21 @@ summary:hover {
     cursor: pointer;
 
 }
+
+.fullscreenytshort{
+  color: black;
+  font-weight:bolder;
+  border: solid 2px black;
+  background-color: rgb(255, 128, 0);
+  padding: 5px;
+  text-decoration: none;
+}
+.fullscreenytshort:hover{
+  color: white;
+
+}
+
+
   .resetbutton, button{
     border: solid, #003366, 2px;
     border-radius: 5px;
@@ -220,7 +270,7 @@ summary:hover {
     font-size:large;
     font-weight: bolder;
   }
-  .resetbutton, button:hover{
+  .resetbutton:hover{
     background-color:#003366;
     color: white;
     cursor: pointer;
