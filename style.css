@@ -12,7 +12,7 @@ iframe {
 }
 body {
 	font-family:sans-serif;
-	background-color:#46A3E3;
+	background-color:#46a4e3dd;
 	color: white;
   margin-left: 7.5%;
 	margin-right: 7.5%;
@@ -23,7 +23,7 @@ body {
 figcaption {
   text-align: center;
   font-size: 16px;
-  color: #003366;
+  color: #003366ce;
   font-weight: bold;
 }
 
@@ -32,14 +32,11 @@ h3{
   }
 
 h2 {
-	border:solid;
-	border-width: 4px;
-	border-color: #003366;
   font-size: 1.6rem;
 	border-radius: 5px;
 	display: inline-block;
-	padding: 3px;
-  background-color: #003366;
+	padding: 6px;
+  background-color: #02448592;
 	}
 
   h4{
@@ -58,8 +55,8 @@ hr {
 
 img {
 	border-radius: 5px;
-  border: solid #003366 4px;
-  
+  border: solid #003366ce 4px;
+
 	}	
 
 p {
@@ -68,7 +65,7 @@ p {
 	}
 
 summary {
-    color: #003366;
+    color: #013a72d9;
     font-size: 1.5rem;
     margin-left: 10px;
     font-weight: bold;
@@ -107,7 +104,7 @@ details[open] > summary::before {
 details {
     border-radius: 5px;
     padding: 0.5rem;
-    background-color: #87CEFA;
+    background-color: #87cefa;
 }
 
 
@@ -119,7 +116,7 @@ summary:hover {
 
 
   .capsulate {
-    background-color: #87CEFA;
+    background-color: #87cefa;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
@@ -130,11 +127,11 @@ summary:hover {
       
       border:solid;
       border-width: 4px;
-      border-color: #003366;
+      border-color: #003366ce;
       border-radius: 5px;
       display: inline-block;
       padding: 3px;
-      background-color: #003366;
+      background-color: #003366ce;
     }
 
   }
@@ -158,7 +155,7 @@ summary:hover {
     hr{
       margin-left: 2%;
       margin-right: 2%;
-      background-color: #003366;
+      background-color: #003366ce;
     }
   
   }
@@ -190,12 +187,54 @@ summary:hover {
   
 }
 .blauwinbtn {
-  color: blue;
-  border: solid 3px blue;
+  color: rgba(0, 0, 255, 0.7);
+  border: solid 3px rgba(0, 0, 255, 0.7);
 }
 .rotwinbtn {
+  color: rgba(255, 0, 0, 0.7);
+  border: solid 3px rgba(255, 0, 0, 0.7);
+}
+.blauwinbtn:hover{
+  color: blue;
+  font-weight: bolder ;
+  border-color: blue;
+}
+.blauwinbtn:active{
+  color: black;
+  
+}
+.rotwinbtn:hover{
   color: red;
-  border: solid 3px red;
+  font-weight: bolder ;
+  border-color: red;
+}
+.rotwinbtn:active{
+  color: black;
+  
+  
+}
+
+.resetbtn1:hover{
+  color: #003366;
+  border-color: #003366;
+  font-weight: bolder;
+
+}
+.resetbtn1:active{
+  color: black;
+  font-weight: bolder;
+  
+}
+.scorereset:hover{
+  color: #003366;
+  border-color: #003366;
+  font-weight: bolder;
+
+}
+.scorereset:active{
+  color: black;
+  font-weight: bolder;
+  
 }
 
 
@@ -204,17 +243,17 @@ summary:hover {
   display: flex;
   justify-content: space-around;
   align-items:center;
-  background-color: #87CEFA;
+  background-color: #87cefa;
   padding: 0px;
   border-radius:5px;
 	}
 
 .boldcolor {
   b{
-    color:#003366;
+    color:#003366ce;
   }
   u{
-    color:#003366;
+    color: #003366ce;
     font-family: sans-serif;
   }
   font-size: 1.1rem; }
@@ -222,7 +261,7 @@ summary:hover {
 
 .nav-btn {
   background-color: white;
-  color: #003366;
+  color: #003366ce;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -262,21 +301,21 @@ summary:hover {
 
 
   .resetbutton, button{
-    border: solid, #003366, 2px;
+    border: solid, #003366ce, 2px;
     border-radius: 5px;
     padding: 5px;
     background-color: white;
-    color: #003366;
+    color: #003366ce;
     font-size:large;
     font-weight: bolder;
   }
   .resetbutton:hover{
-    background-color:#003366;
+    background-color: #003366ce;
     color: white;
     cursor: pointer;
   }
 .nav-btn:hover {
-  background-color:  #46A3E3;
+  background-color:  #46a4e3dd;
 	}
 
   .nav-btn:active {
@@ -299,7 +338,7 @@ summary:hover {
   display: flex;
   justify-content:space-around;
   align-items: center;
-  background-color: #87CEFA;
+  background-color: #87cefa;
   padding: 0px;
   border-radius:5px;
   margin: 0px;
@@ -310,7 +349,7 @@ summary:hover {
 	}
 
 .nav-btn1 {
-  background-color: #46A3E3;
+  background-color: #46a4e3dd;
   color: white;
   border: none;
   padding: 6px 10px;
@@ -325,18 +364,18 @@ summary:hover {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #87CEFA; 
+  background: #87cefa; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #003366; 
+  background: #003366ce; 
   border-radius: 4px;
 }
 
 .solar--phone-calling-bold {
   margin-top:6px;
   display: flex;
-  background-color: #46A3E3;
-  border: solid #46A3E3 5px;
+  background-color: #46a4e3dd;
+  border: solid #46a4e3dd 5px;
   border-radius: 100%;
   width: 36px;
   height: 36px;
@@ -347,8 +386,8 @@ summary:hover {
 
 .mingcute--location-2-fill {
   margin-top:7px;
-  background-color:#46A3E3 ;
-  border: solid #46A3E3 5px;
+  background-color:#46a4e3dd ;
+  border: solid #46a4e3dd 5px;
   border-radius: 100%;
   display: flex;
   width: 36px;
@@ -361,8 +400,8 @@ summary:hover {
 .material-symbols--stacked-email-rounded {
   margin-top: 4px;
   padding: 2px;
-  border: solid #46A3E3 5px;
-  background-color:#46A3E3 ;
+  border: solid #46a4e3dd 5px;
+  background-color:#46a4e3dd ;
   display: flex;
   border-radius: 100%;
   width: 36px;
