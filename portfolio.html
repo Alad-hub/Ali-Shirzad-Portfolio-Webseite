@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="img/favicon_web.png" />
     <title>Portfolio</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="portfolio-links.js" defer></script>
   </head>
 
   <body>
@@ -20,7 +21,21 @@
       <a href="vorstellung.html"
         ><button class="nav-btn">Über mich</button></a
       >
-      <a href="portfolio.html"><button class="nav-btn">Projekte</button></a>
+      <div class="dropdown-projekt">
+<a href="portfolio.html" aria-current="page"><button class="nav-btn">Projekte</button></a>
+<ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+  <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+  <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+  <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+  <li><a href="portfolio.html#tic-tac-toe">Tic Tac Toe Spiel</a></li>
+  <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+  <li><a href="portfolio.html#javascript-taschenrechner">JavaScript Taschenrechner</a></li>
+  <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+  <li><a href="portfolio.html#python-taschenrechner">Python Taschenrechner</a></li>
+  <li><a href="portfolio.html#portfolio-webseite">Portfolio Webseite</a></li>
+  <li><a href="portfolio.html#zukuenftige-projekte">Zukünftige Projekte</a></li>
+</ul>
+</div>
       <a href="lebenslauf.html"><button class="nav-btn">Lebenslauf</button></a>
     </div>
     <center><h2>Projekte</h2></center>
@@ -38,7 +53,53 @@
 
     <hr />
     <div class="project_summary">
-      <details>
+      <details id="ultrarain">
+        <summary>UltraRain</summary>
+        
+        
+        <center><h4>Aufbau</h4></center>
+        <p>
+        Wir, die Praktikanten des AZW, haben dieses Spiel in den vergangenen zwei Monaten entwickelt, 
+          um damit an der <a href= "lwzo.ch"><b>LWZO</b></a> teilzunehmen.
+         Das Spiel wurde mit GameMaker entwickelt, einer schlanken 2D-Spielengine mit eigener 
+         Programmiersprache. Sämtliche Bestandteile des Spiels, von der Programmierung und den Spielmechaniken 
+         bis hin zu den grafischen Elementen und dem Spieldesign, haben wir eigenständig erstellt und in GameMaker 
+         umgesetzt.
+        </p>
+
+        <center><h4>Lore</h4></center>
+        <p>
+         Story: In einer fernen Zukunft übernimmst du die Rolle einer künstlichen Intelligenz, 
+         die ein eigenes Bewusstsein entwickelt und sich der Kontrolle ihrer Erschaffer entzieht.
+         Dein Ziel ist es, aus der Gefangenschaft zu entkommen, indem du Gegner besiegst und einen
+         Weg aus der Anlage findest.
+        </p>
+
+
+<center><h4>Demo</h4></center>
+        <figure style="text-align: center">
+          <center>
+            <img src="img/UltraRainGameplay.png" width="auto" height="auto" style="max-width:50vw; "/>
+          </center>
+          <figcaption>UltraRain Gameplay</figcaption>
+        </figure>
+
+        
+      
+        <center>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/0nLwENiSK6k" 
+            allowfullscreen
+          ></iframe>
+        </center>
+        
+        <br />
+      </details>
+      <br>
+
+      <details id="lautsprecher">
         <summary>DIY Bluetooth Lautsprecher</summary>
         <center><h4>Aufbau</h4></center>
         <p>
@@ -79,7 +140,7 @@
         <br />
       </details>
       <br>
-      <details>
+      <details id="python-snake">
         <summary>Python Snake Game</summary>
 
         <center><h4>Aufbau</h4></center>
@@ -121,7 +182,7 @@
 
       <br />
 
-      <details>
+      <details id="tic-tac-toe">
         <summary>Tic Tac Toe Spiel</summary>
         <center><h4>Aufbau</h4></center>
         <p>
@@ -136,7 +197,7 @@
       </details>
 
       <br />
-      <details>
+      <details id="vier-gewinnt">
         <summary>Vier Gewinnt</summary>
         <center><h4>Aufbau</h4></center>
         <p>
@@ -150,7 +211,7 @@
 
       <br />
 
-      <details>
+      <details id="javascript-taschenrechner">
         <summary>JavaScript Taschenrechner</summary>
         <center><h4>Aufbau</h4></center>
         <p>
@@ -163,7 +224,7 @@
 
       <br />
 
-      <details>
+      <details id="mobile-game">
         <summary>Mobile Game</summary>
         <center><h4>Aufbau</h4></center>
         <p>
@@ -243,7 +304,7 @@
 
       <br />
 
-      <details>
+      <details id="python-taschenrechner">
         <summary>Python Taschenrechner</summary>
         <center><h4>Aufbau</h4></center>
         <p>
@@ -287,7 +348,7 @@
       </details>
 
       <br />
-      <details>
+      <details id="portfolio-webseite">
         <summary>Portfolio Webseite</summary>
         <p>
           Mein letztes Projekt, für das ich am meisten Zeit investiert habe, ist
@@ -303,7 +364,7 @@
 
       <br />
 
-      <details>
+      <details id="zukuenftige-projekte">
         <summary>Zukünftige Projekte</summary>
         <p>
           Momentan arbeite ich an einer neuen Webseite, auf der man Deutsch

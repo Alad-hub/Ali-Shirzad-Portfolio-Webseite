@@ -6,6 +6,8 @@
     <link rel="icon" type="image/png" href="img/favicon_web.png">
 	<title>Lebenslauf Ali Shirzad</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="lebenslauf-skills.css" rel="stylesheet" type="text/css"/>
+    <script src="lebenslauf-skills.js" defer></script>
 	<style>
 		
 	</style>
@@ -19,10 +21,87 @@
   <a href="index.html">
     <img src="img/HomeIcon.png" height="36px" width="32px" style="padding-top: 5px; border:none; outline: none;"></a>
   <a href="vorstellung.html"> <button class="nav-btn">Über mich</button></a>
-  <a href="portfolio.html"> <button class="nav-btn">Projekte</button></a>
-  <a href="lebenslauf.html"> <button class="nav-btn">Lebenslauf</button></a>
+  <div class="dropdown-projekt">
+<a href="portfolio.html"> <button class="nav-btn">Projekte</button></a>
+<ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+  <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+  <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+  <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+  <li><a href="portfolio.html#tic-tac-toe">Tic Tac Toe Spiel</a></li>
+  <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+  <li><a href="portfolio.html#javascript-taschenrechner">JavaScript Taschenrechner</a></li>
+  <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+  <li><a href="portfolio.html#python-taschenrechner">Python Taschenrechner</a></li>
+  <li><a href="portfolio.html#portfolio-webseite">Portfolio Webseite</a></li>
+  <li><a href="portfolio.html#zukuenftige-projekte">Zukünftige Projekte</a></li>
+</ul>
+</div>
+  <a href="lebenslauf.html" aria-current="page"> <button class="nav-btn">Lebenslauf</button></a>
 </div> 
 <body> 
+	
+	<section class="cv-skills" aria-labelledby="skills-heading">
+		<h2 id="skills-heading">Meine Fähigkeiten</h2>
+		<details id="webentwicklung">
+			<summary>
+				<h4>Webentwicklung</h4>
+			</summary>
+			<div class="skill-description">
+				<ul>
+					<li><strong>HTML:</strong> Inhalte und Struktur einer Webseite aufbauen.</li>
+					<li><strong>CSS:</strong> Farben, Layout und responsive Darstellung gestalten.</li>
+					<li><strong>JavaScript:</strong> Interaktionen und Funktionen programmieren.</li>
+				</ul>
+				<p>In einem Webentwicklungskurs habe ich die Grundlagen von HTML, CSS und JavaScript gelernt.
+					Anschliessend habe ich mein Wissen zu Hause selbstständig vertieft und diese Webseite erstellt.
+				</p>
+				<a href="index.html">Meine Homepage ansehen &rarr;</a>
+			</div>
+		</details>
+		<details id="appentwicklung">
+			<summary>
+				<h4>Appentwicklung</h4>
+			</summary>
+			<div class="skill-description">
+				<ul>
+					<li><strong>Python:</strong> Programmlogik und Berechnungen umsetzen.</li>
+					<li><strong>Tkinter:</strong> Grafische Oberflächen für Python-Programme erstellen.</li>
+					<li><strong>Thunkable:</strong> Mobile Apps mit visuellen Logikblöcken entwickeln.</li>
+				</ul>
+				<p>Mit Python und der GUI-Bibliothek Tkinter habe ich ein Spiel und einen einfachen Taschenrechner entwickelt.
+					Mit Thunkable habe ich ausserdem ein mobiles Spiel erstellt und gelernt, wie sich mobile Apps entwickeln lassen.</p>
+				<a href="portfolio.html">Meine Projekte ansehen &rarr;</a>
+			</div>
+		</details>
+		<details id="gameentwicklung">
+			<summary>
+				<h4>Gameentwicklung</h4>
+			</summary>
+			<div class="skill-description">
+				<ul>
+					<li><strong>GameMaker:</strong> 2D-Spiele entwickeln und Spielmechaniken programmieren.</li>
+				</ul>
+				<p>Gemeinsam mit meinen Kollegen am AZW habe ich mit GameMaker das Windows-Spiel UltraRain entwickelt.</p>
+				<a href="portfolio.html">UltraRain und weitere Projekte ansehen &rarr;</a>
+			</div>
+		</details>
+		<details id="elektrotechnik">
+			<summary>
+				<h4>Elektrotechnik</h4>
+			</summary>
+			<div class="skill-description">
+				<ul>
+					<li><strong>Löten:</strong> Elektronische Bauteile verbinden; im BVJ gelernt.</li>
+					<li><strong>Arduino:</strong> Mikrocontroller für Roboter, LEDs und Sensoren programmieren.</li>
+				</ul>
+				<p>Im Elektrotechnikunterricht am BVJ habe ich Löten gelernt.
+					Im Informatikunterricht haben wir mit Arduino-Mikrocontrollern gearbeitet und damit Roboter,
+					LEDs und verschiedene Sensoren programmiert.
+				</p>
+				<a href="portfolio.html">Mein Lautsprecher-Projekt ansehen &rarr;</a>
+			</div>
+		</details>
+	</section>
                 <br>
                 
 	<center><img src="img/Lebenslauf.png" class="lebenslauf"></center>

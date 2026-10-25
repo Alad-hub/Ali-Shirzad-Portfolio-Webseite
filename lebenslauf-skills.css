@@ -1,0 +1,99 @@
+/* Skill rows on the Lebenslauf page. */
+.cv-skills {
+  width: 70%;
+  margin: 28px auto 0;
+}
+
+.cv-skills > h2 {
+  display: table;
+  margin: 0 auto 20px;
+}
+
+.cv-skills > details {
+  margin-bottom: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cv-skills > details > summary {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 8px 12px;
+  margin: 0;
+  padding: 18px 16px;
+  color: #003366;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.cv-skills > details > summary::before {
+  width: 22px;
+  height: 22px;
+}
+
+.cv-skills summary h4 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.cv-skills > details > summary:hover {
+  background-color: #b8e2fc;
+  color: #003366;
+}
+
+.cv-skills > details > summary:focus-visible {
+  outline: 2px solid #003366;
+  outline-offset: -4px;
+  border-radius: 5px;
+}
+
+.cv-skills .skill-description {
+  margin: 0 16px 18px 50px;
+  padding-top: 12px;
+  border-top: 1px solid #00336640;
+  color: #003366;
+}
+
+.cv-skills .skill-description ul {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cv-skills .skill-description li + li { margin-top: 6px; }
+
+.cv-skills .skill-description a {
+  color: #003366;
+  font-size: 0.9rem;
+  text-underline-offset: 3px;
+}
+
+.cv-skills .skill-description a:hover { color: white; }
+
+@media only screen and (max-width: 700px) {
+  .cv-skills { width: 90%; }
+}
+
+@media only screen and (max-width: 600px) {
+  .cv-skills .skill-description {
+    margin-left: 12px;
+    margin-right: 12px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .cv-skills { width: 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-skills > details > summary,
+  .cv-skills > details > summary::before { transition: none; }
+}

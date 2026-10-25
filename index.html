@@ -18,11 +18,30 @@
 <body>
 
 	<div class="navbar">
-		<a href="index.html">
+		<a href="index.html" aria-current="page">
 			<img src="img/HomeIcon.png" height="36px" width="32px"
 				style="padding-top: 5px; border:none; outline: none;"></a>
+
 				<a href="vorstellung.html"><button class="nav-btn">Über mich</button></a>
-		<a href="portfolio.html"><button class="nav-btn">Projekte</button></a>
+
+
+		<div class="dropdown-projekt">
+<a href="portfolio.html"><button class="nav-btn" id="projekt-btn">Projekte</button></a>
+<ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+  <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+  <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+  <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+  <li><a href="portfolio.html#tic-tac-toe">Tic Tac Toe Spiel</a></li>
+  <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+  <li><a href="portfolio.html#javascript-taschenrechner">JavaScript Taschenrechner</a></li>
+  <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+  <li><a href="portfolio.html#python-taschenrechner">Python Taschenrechner</a></li>
+  <li><a href="portfolio.html#portfolio-webseite">Portfolio Webseite</a></li>
+  <li><a href="portfolio.html#zukuenftige-projekte">Zukünftige Projekte</a></li>
+</ul>
+</div>
+
+
 		<a href="lebenslauf.html"><button class="nav-btn">Lebenslauf</button></a>
 	</div>
 	<br>
@@ -33,12 +52,30 @@
 
 
 	<center><img src="img/Bewerbungsphoto.JPG" height="310" width="300px" style=" border-radius: 50%"></center>
-	<center>
-		<h4>Grüeziwohl meine Damen und Herren.<br>
+
+		<center><div class="text-bg">
+		<h4>Grüezi wohl, meine Damen und Herren.<br>
+			<br>
 			Ich heisse Ali Shirzad und dies ist meine Portfolio-Webseite.<br>
-			Hier werden Sie mehr über mich und meine Fähigkeiten erfahren. <br></h4>
-	</center>
+			<br>
+			Ich interessiere mich für IT, Programmierung und Elektrotechnik.<br>
+			<br>
+			Hier erfahren Sie mehr über mich und meine Fähigkeiten. <br>
+			<br>
+			Anhand meiner Projekte können Sie sich einen Eindruck von meinen Fähigkeiten verschaffen.</h4>
+			</div></center>
 	
+			<center><div class="sqParent">
+                <div class="sq" id="nom1"><a href="lebenslauf.html#webentwicklung">Web-Entwicklung</a></div>
+                <div class="sq" id="akk1"><a href="lebenslauf.html#gameentwicklung">Game-Entwicklung</a></div>
+                <div class="space" id="space1"><div class="pointer" id="rotator"></div></div>
+                <div class="sq" id="dat1"><a href="lebenslauf.html#appentwicklung">App-Entwicklung</a></div>
+                <div class="sq" id="gen1"> <a href="lebenslauf.html#elektrotechnik">Elektrotechnik</a></div>
+            </div></center>
+<br>
+
+
+
 
 
 	<div class="navbar1">
@@ -65,5 +102,25 @@
 		</div>
 	</div>
 
+
+	<script>
+
+const placeholder = document.getElementById("rotator");
+
+function rotateOnHover(element, className) {
+    element.addEventListener("mouseenter", () => {
+        placeholder.className = className;
+    });
+}
+
+rotateOnHover(nom1, "pointernom");
+rotateOnHover(akk1, "pointerakk");
+rotateOnHover(dat1, "pointerdat");
+rotateOnHover(gen1, "pointergen");
+rotateOnHover(space1, "pointer");
+
+
+
+</script>
 </body>
 </html>

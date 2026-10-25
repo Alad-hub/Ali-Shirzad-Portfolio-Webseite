@@ -27,6 +27,16 @@ figcaption {
   font-weight: bold;
 }
 
+.text-bg{
+  background-color: #87cefa;
+  display:flex;
+  justify-content: center;
+  width: 50vw;
+  border-radius: 5px;
+   color:#003366ce;
+
+}
+
 h3{
     text-align: center;
   }
@@ -41,6 +51,7 @@ h2 {
 
   h4{
     text-align: center;
+  
   }
 
 hr {
@@ -239,6 +250,111 @@ summary:hover {
 }
 
 
+/*start of homepage css*/
+.sqParent{
+    display: flex;
+    width: 80%;    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 3px;
+    background-color: #87cefa;
+    margin: 10px;
+    border-radius: 5px;
+}
+.sq{
+    width: 48%;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    margin-top:10px;
+    margin-bottom: 10px;  
+    transition:0.2s;    
+    border-radius: 5px;
+}
+
+.sq a{
+    color: #003366ce;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+.sq:hover{
+    background-color:#46a4e3dd;
+    
+}
+
+.space{
+    width: 100%;
+    height: 36px;
+    
+}
+
+.pointer{
+    background-image: url("img/null.svg");
+    background-size: 100% 100%;
+    height:36px;
+    width: 36px;
+    transition: 0.3s ease;
+    
+}
+
+.pointer{
+    background-image: url("img/null.svg");
+    background-size: 100% 100%;
+    height:36px;
+    width: 36px;
+    transition: 0.3s ease;
+    
+}
+
+.pointernom{
+    background-image: url("img/dropdown.svg");
+    background-size: 100% 100%;
+    width: 36px;
+    height:36px;
+    
+    
+    transform: rotate(-135deg);
+    transition: 0.2s ease;
+}
+.pointerakk{
+    background-image: url("img/dropdown.svg");
+    background-size: 100% 100%;
+    width: 36px;
+    height:36px;
+    
+    transform: rotate(-45deg);
+    transition: 0.2s ease;
+}
+.pointerdat{
+    background-image: url("img/dropdown.svg");
+    background-size: 100% 100%;
+    width: 36px;
+    height:36px;
+    
+    transform: rotate(135deg);
+    transition: 0.2s ease;
+}
+.pointergen{
+    background-image: url("img/dropdown.svg");
+    background-size: 100% 100%;
+    width: 36px;
+    height:36px;
+   
+    transform: rotate(45deg);
+    transition: 0.2s ease;
+}
+/*end of homeage css*/
+
 
 .navbar {
   display: flex;
@@ -271,6 +387,11 @@ summary:hover {
   font-size: 1rem;
   transition: 0.2s;
 	}
+
+  .footer-element{
+    display: flex;
+    
+  }
 .tictacbutton{
   margin-left: 2vw;
   font-weight: bolder;
@@ -316,11 +437,13 @@ summary:hover {
     color: white;
     cursor: pointer;
   }
-.nav-btn:hover {
+.nav-btn:hover,
+.navbar a[aria-current="page"] > .nav-btn {
   background-color:  #46a4e3dd;
 	}
 
-  .nav-btn:active {
+  .nav-btn:active,
+  .navbar a[aria-current="page"] > .nav-btn {
   color:white;
 }
 .location{
@@ -333,6 +456,69 @@ summary:hover {
 .location:active{
   color: white;
 }
+
+
+/*Projekt-btn dropdown*/
+.dropdown-projekt {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdwon-projekt-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 68vw;
+    max-height: min(70vh, 620px);
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: #87cefa;
+    border: 2px solid #003366ce;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px #00336630;
+    z-index: 20;
+}
+
+.dropdwon-projekt-content li + li {
+    margin-top: 4px;
+}
+
+.dropdwon-projekt-content a {
+    display: block;
+    padding: 7px 8px;
+    color: #003366;
+    background-color: white;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+    border-radius: 5px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: background-color 0.2s;
+}
+
+.dropdwon-projekt-content a:hover,
+.dropdwon-projekt-content a:focus-visible {
+    background: #b8e2fc;
+    color: #003366;
+}
+
+.dropdwon-projekt-content a:focus-visible {
+    outline: 2px solid #003366;
+    outline-offset: -2px;
+}
+
+.dropdown-projekt:hover .dropdwon-projekt-content,
+.dropdown-projekt:focus-within .dropdwon-projekt-content {
+    display: block;
+}
+
+
 
 
 .navbar1 {
@@ -487,4 +673,75 @@ summary:hover {
       min-width:100%;
     }
   }
+}
+
+@media only screen and (min-width: 1920px) {
+  .navbar {
+  scale: 1.3;
+  justify-content:flex-start;
+  gap: 10px;
+  width: fit-content;
+  
+  
+	}
+
+  .navbar > :first-child {
+    margin-left: 10px;
+}
+.navbar > :last-child {
+    margin-right: 10px;
+}
+
+  .navbar1 {
+  scale: 1.3;
+  justify-content:flex-end;
+  gap: 10px;
+  width: fit-content;
+  
+  
+	}
+
+  .navbar1 > :first-child {
+    margin-left: 10px;
+}
+}
+
+/*.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  background-color: #87cefa;
+  padding: 0px;
+  border-radius:5px;
+	}
+*/
+
+/* Keep the existing layout readable on small screens. */
+@media only screen and (max-width: 600px) {
+  body { margin-left: 4%; margin-right: 4%; }
+
+  .navbar { gap: 4px; padding: 4px; }
+  .navbar .nav-btn {
+    padding: 8px 6px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  img[src="img/Bewerbungsphoto.JPG"],
+  img[src="img/Projekt_logo.PNG"] { max-width: 100%; height: auto; }
+
+  .text-bg { width: 100%; padding: 0 10px; }
+  .sqParent { width: 100%; margin: 10px 0; }
+  .sq { height: auto; min-height: 56px; }
+  .sq a {
+    min-height: 56px;
+    padding: 8px;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .navbar1 > div { min-width: 0; max-width: 100%; }
+  .navbar1 > div > span { flex-shrink: 0; }
+  .nav-btn1 { min-width: 0; }
+  .nav-btn1 a { overflow-wrap: anywhere; }
 }
