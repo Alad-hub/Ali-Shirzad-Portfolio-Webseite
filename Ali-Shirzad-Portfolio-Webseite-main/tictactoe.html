@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon_web.png" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Tic Tac Toe Single-Player</title>
+    <style></style>
+  </head>
+  <div class="navbar">
+    <a href="index.html">
+      <img
+        src="img/HomeIcon.png"
+        height="36px"
+        width="32px"
+        style="padding-top: 5px; border: none; outline: none"
+    /></a>
+    <a href="vorstellung.html"> <button class="nav-btn">Über mich</button></a>
+    <div class="dropdown-projekt">
+<a href="portfolio.html"> <button class="nav-btn">Projekte</button></a>
+<ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+  <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+  <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+  <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+  <li><a href="portfolio.html#tic-tac-toe">Tic-Tac-Toe-Spiel</a></li>
+  <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+  <li><a href="portfolio.html#javascript-taschenrechner">JavaScript-Taschenrechner</a></li>
+  <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+  <li><a href="portfolio.html#python-taschenrechner">Python-Taschenrechner</a></li>
+  <li><a href="portfolio.html#portfolio-webseite">Portfolio-Webseite</a></li>
+  <li><a href="portfolio.html#zukuenftige-projekte">Zukünftige Projekte</a></li>
+</ul>
+</div>
+    <a href="lebenslauf.html"> <button class="nav-btn">Lebenslauf</button></a>
+  </div>
+
+  <body>
+    <div class="viergewinnt-mode-bar">
+      <a class="nav-btn viergewinnt-mode" href="tictactoeMP.html">Multi-Player</a>
+    </div>
+    <center><h2>Tic-Tac-Toe Single Player</h2></center>
+    <div id="gameboard" class="gamemap">
+      <table>
+        <tr>
+          <td onclick="switchSpieler(1)">
+            <img id="spielfeld1" src="img/Leer.png" />
+          </td>
+          <td onclick="switchSpieler(2)">
+            <img id="spielfeld2" src="img/Leer.png" />
+          </td>
+          <td onclick="switchSpieler(3)">
+            <img id="spielfeld3" src="img/Leer.png" />
+          </td>
+        </tr>
+        <tr>
+          <td onclick="switchSpieler(4)">
+            <img id="spielfeld4" src="img/Leer.png" />
+          </td>
+          <td onclick="switchSpieler(5)">
+            <img id="spielfeld5" src="img/Leer.png" />
+          </td>
+          <td onclick="switchSpieler(6)">
+            <img id="spielfeld6" src="img/Leer.png" />
+          </td>
+        </tr>
+        <tr>
+          <td onclick="switchSpieler(7)">
+            <img id="spielfeld7" src="img/Leer.png" />
+          </td>
+          <td onclick="switchSpieler(8)">
+            <img id="spielfeld8" src="img/Leer.png" />
+          </td>
+          <td onclick="switchSpieler(9)">
+            <img id="spielfeld9" src="img/Leer.png" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <h3 id="decision">‎</h3>
+
+    
+
+    <center>
+        <button class="resetbutton" type="button" onclick="reset()">Replay</button>
+      </center>
+
+      <div style="text-align: center">
+      <h4
+        style="
+          border-radius: 5px;
+          border: ridge 3px rgba(255, 0, 0, 0.7);
+          background-color: rgba(255, 255, 255, 0.4);
+          display: inline-block;
+          padding: 3px;
+          color: rgba(255, 0, 0, 0.7);
+        "
+        id="rotscore"
+      >
+        Rot: 0
+      </h4>
+      <h4
+        style="
+          border-radius: 5px;
+          border: ridge 3px rgba(0, 0, 255, 0.7);
+          background-color: rgba(255, 255, 255, 0.401);
+          display: inline-block;
+          padding: 3px;
+          color: rgba(0, 0, 255, 0.7);
+        "
+        id="blauscore"
+      >
+        Blau: 0
+      </h4>
+    </div>
+
+    
+    <br/>
+    
+<div class="navbar1">
+		<div style="display:flex;">
+			<span class="material-symbols--stacked-email-rounded"></span>
+			<p class="nav-btn1" style="margin-left:1px">
+				<a class="location" href="mailto:Shirzadali.kontakt@gmail.com">
+					shirzadali.kontakt@gmail.com</a></p>
+
+		</div>
+		
+
+		<div style="display:flex;">
+			<span class="solar--phone-calling-bold"></span>
+			<p class="nav-btn1" style="margin-left:1px;"> <a class="location" href="tel: +41 77 917 67 49">
+				+41 77 917 67 49
+			</a></p>
+		</div>
+
+		<div style="display:flex;">
+			<span class="mingcute--location-2-fill"></span>
+			<p class="nav-btn1" style="margin-left:1px;"><a class="location"
+			href="https://maps.app.goo.gl/h2aERwzxVBSbZ8fw6">8050 Zürich</a></p>
+		</div>
+	</div>
+  </body>
+</html>
+
+
+<script>
+
+      let winblau= 0;
+      let winrot= 0;
+      let lastinpu= null;
+      let winnerstatus = "none";
+      let gamestate = "Running";
+      let computerTurn = null; // Codex addition: track the pending computer move.
+
+      let elements = [
+        "spielfeld1",
+        "spielfeld2",
+        "spielfeld3",
+        "spielfeld4",
+        "spielfeld5",
+        "spielfeld6",
+        "spielfeld7",
+        "spielfeld8",
+        "spielfeld9",
+      ];
+
+      let algorithm2= [
+        
+      ];
+
+      let algorithm3 = [
+
+      ];
+
+      let algorithm4 = [
+
+      ];
+
+      const algorithm = [
+        [2, 4, 5],
+        [1, 3, 4, 5, 6],
+        [2, 5, 6],
+        [1, 2, 5, 7, 8],
+        [1, 2, 3, 4, 6, 7, 8],
+        [2, 3, 5, 7, 8],
+        [4, 5, 8],
+        [4, 5, 6, 7, 9],
+        [5, 6, 8]
+      ]
+
+
+      // BEGIN YOUR CODE MOVED BY CODEX — original winning lines from checkWinner().
+      // The AI and checkWinner use the same eight winning lines.
+      const winCombos = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9],
+        [1, 5, 9],
+        [3, 5, 7],
+      ];
+      // END YOUR CODE MOVED BY CODEX
+
+      // BEGIN CODEX ADDITION — find an immediate win or block.
+      // Return the empty square in a line that already has two of this mark.
+      function findFinishingMove(mark) {
+        for (const combo of winCombos) {
+          const ids = combo.map((number) => "spielfeld" + number);
+          const images = ids.map((id) => document.getElementById(id).getAttribute("src"));
+          const emptyIndex = images.indexOf("img/Leer.png");
+          if (emptyIndex !== -1 && images.filter((image) => image === mark).length === 2) {
+            return ids[emptyIndex];
+          }
+        }
+      }
+      // END CODEX ADDITION
+
+      function switchSpieler(zellnr) {
+        // BEGIN CODEX ADDITION — only accept moves on an empty square during the player's turn.
+        const cellId = "spielfeld" + zellnr;
+        if (gamestate !== "Running" || computerTurn !== null || !elements.includes(cellId)) {
+          return;
+        }
+        // END CODEX ADDITION
+        algorithm2.pop();
+        algorithm3.length = 0;
+        algorithm4.length = 0;
+        document.getElementById("spielfeld" + zellnr).src = "img/Kreuz.png";
+        elements = elements.filter((item) => item !== "spielfeld" + zellnr);
+        lastinput= zellnr-1;
+        algorithm2.push(algorithm[lastinput]);
+        console.log(algorithm2);
+        for (let i = 0; i < algorithm2[0].length; i++) {
+    algorithm3.push("spielfeld" + algorithm2[0][i]);
+}
+
+for (let i = 0; i < algorithm3.length; i++) {
+    if (document.getElementById(algorithm3[i]).getAttribute("src") === "img/Leer.png") {
+        algorithm4.push(algorithm3[i]);
+    }
+}
+        console.log(algorithm4);
+
+        
+
+        
+        
+
+        // BEGIN CODEX CHANGES — choose the computer's move and reserve its square.
+        checkWinner();
+        checktie();
+        if (gamestate !== "Running") {
+          return;
+        }
+
+        const candidates = algorithm4.length ? algorithm4 : elements;
+        // The center belongs to four winning lines, so prefer it when free.
+        const center = elements.includes("spielfeld5") ? "spielfeld5" : undefined;
+        // Always take a win. Only look for a block on half of the other turns.
+        const randomcell =
+          findFinishingMove("img/Kreis.png") ||
+          (Math.random() < 0.5 && findFinishingMove("img/Kreuz.png")) ||
+          center ||
+          candidates[Math.floor(Math.random() * candidates.length)];
+        elements = elements.filter((item) => item !== randomcell);
+        // END CODEX CHANGES
+
+        // BEGIN CODEX CHANGES — track the timer and check for a tie after the computer plays.
+        computerTurn = setTimeout(() => {
+          computerTurn = null;
+          document.getElementById(randomcell).src = "img/Kreis.png";
+          checkWinner();
+          checktie();
+        }, 500);
+        // END CODEX CHANGES
+      }
+
+      function reset() {
+        // BEGIN CODEX ADDITION — cancel the old turn and unlock the board for Replay.
+        clearTimeout(computerTurn);
+        computerTurn = null;
+        document.getElementById("gameboard").inert = false;
+        // END CODEX ADDITION
+        for (var nr = 1; nr <= 9; nr++) {
+          document.getElementById("spielfeld" + nr).src = "img/Leer.png";
+
+          document.getElementById("decision").innerHTML = "‎ ";
+          gamestate = "Running";
+          winnerstatus = "none";
+
+          elements = [
+            "spielfeld1",
+            "spielfeld2",
+            "spielfeld3",
+            "spielfeld4",
+            "spielfeld5",
+            "spielfeld6",
+            "spielfeld7",
+            "spielfeld8",
+            "spielfeld9",
+          ];
+        }
+      }
+      
+
+      function checkWinner() {
+        // Codex moved your winCombos array above switchSpieler() so both checks can use it.
+        for (let combo of winCombos) {
+          const [a, b, c] = combo.map(
+            (i) => document.getElementById("spielfeld" + i).src
+          );
+
+          if (
+            a.includes("img/Leer.png") ||
+            b.includes("img/Leer.png") ||
+            c.includes("img/Leer.png")
+          )
+            continue;
+
+          if (
+            a.includes("img/Kreuz.png") &&
+            b.includes("img/Kreuz.png") &&
+            c.includes("img/Kreuz.png")
+          ) {
+            gamestate = "Terminate";
+            document.getElementById("gameboard").inert = true; // Codex change: match multiplayer.
+            document.getElementById("decision").innerHTML =
+              "<u><i>Sie haben gewonnen!</i></u>";
+            winnerstatus = "won";
+            console.log("this is k" + winnerstatus);
+            winrot++;
+            document.getElementById("rotscore").innerHTML = "Rot: " + winrot;
+          }
+
+          if (
+            a.includes("img/Kreis.png") &&
+            b.includes("img/Kreis.png") &&
+            c.includes("img/Kreis.png")
+          ) {
+            gamestate = "Terminate";
+            document.getElementById("gameboard").inert = true; // Codex change: match multiplayer.
+            document.getElementById("decision").innerHTML = "Blau hat gewonnen!";
+              "<u><i>Der Kreis hat gewonnen!</i></u>";
+            winnerstatus = "won";
+            console.log("this is k" + winnerstatus);
+            winblau++;
+            document.getElementById("blauscore").innerHTML = "Blau: " + winblau;
+            
+          }
+        }
+      }
+      function checktie() {
+        if (elements.length == 0 && winnerstatus == "none") {
+          document.getElementById("decision").innerHTML = "<u><i>Tie!</i></u>";
+          gamestate = "Terminate";
+          document.getElementById("gameboard").inert = true; // Codex change: lock drawn boards too.
+          console.log(winnerstatus);
+        }
+      }
+    </script>
+

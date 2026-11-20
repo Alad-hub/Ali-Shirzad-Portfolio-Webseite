@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon_web.png" />
+    <title>Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="portfolio-links.js" defer></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html">
+        <img
+          src="img/HomeIcon.png"
+          height="36px"
+          width="32px"
+          style="padding-top: 5px; border: none; outline: none"
+      /></a>
+      <a href="vorstellung.html"
+        ><button class="nav-btn">Über mich</button></a
+      >
+      <div class="dropdown-projekt">
+<a href="portfolio.html" aria-current="page"><button class="nav-btn">Projekte</button></a>
+<ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+  <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+  <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+  <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+  <li><a href="portfolio.html#tic-tac-toe">Tic-Tac-Toe-Spiel</a></li>
+  <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+  <li><a href="portfolio.html#javascript-taschenrechner">JavaScript-Taschenrechner</a></li>
+  <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+  <li><a href="portfolio.html#python-taschenrechner">Python-Taschenrechner</a></li>
+  <li><a href="portfolio.html#portfolio-webseite">Portfolio-Webseite</a></li>
+  <li><a href="portfolio.html#zukuenftige-projekte">Zukünftige Projekte</a></li>
+</ul>
+</div>
+      <a href="lebenslauf.html"><button class="nav-btn">Lebenslauf</button></a>
+    </div>
+    <center><h2>Projekte</h2></center>
+    <center>
+      <img
+        src="img/Projekt_logo.PNG"
+        style="border-radius: 100%; width: 300px; height: 300px"
+      />
+    </center>
+    <h4>
+      Hier unten finden Sie einige meiner Projekte.
+      <br />
+      Es werden mehr in der Zukunft hinzugefügt.
+    </h4>
+
+    <hr />
+    <div class="project_summary">
+      <details id="ultrarain">
+        <summary>UltraRain</summary>
+        
+        
+        <center><h4>Aufbau</h4></center>
+        <p>
+        Wir, die Praktikanten des AZW, haben dieses Spiel in den vergangenen zwei Monaten entwickelt, 
+          um damit an der <a href="https://lwzo.ch" target="_blank" rel="noopener noreferrer"><b>LWZO</b></a> teilzunehmen.
+         Das Spiel wurde mit GameMaker entwickelt, einer schlanken 2D-Spielengine mit eigener 
+         Programmiersprache. Sämtliche Bestandteile des Spiels, von der Programmierung und den Spielmechaniken 
+         bis hin zu den grafischen Elementen und dem Spieldesign, haben wir eigenständig erstellt und in GameMaker 
+         umgesetzt.
+        </p>
+
+        <center><h4>Lore</h4></center>
+        <p>
+         Story: In einer fernen Zukunft übernimmst du die Rolle einer künstlichen Intelligenz, 
+         die ein eigenes Bewusstsein entwickelt und sich der Kontrolle ihrer Erschaffer entzieht.
+         Dein Ziel ist es, aus der Gefangenschaft zu entkommen, indem du Gegner besiegst und einen
+         Weg aus der Anlage findest.
+        </p>
+
+
+<center><h4>Demo</h4></center>
+        <figure style="text-align: center">
+          <center>
+            <img src="img/UltraRainGameplay.png" width="auto" height="auto" style="max-width:50vw; "/>
+          </center>
+          <figcaption>UltraRain Gameplay</figcaption>
+        </figure>
+
+        
+      
+        <center>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/0nLwENiSK6k" 
+            allowfullscreen
+          ></iframe>
+        </center>
+        
+        <br />
+      </details>
+      <br>
+
+      <details id="lautsprecher">
+        <summary>DIY Bluetooth Lautsprecher</summary>
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Dieser Lautsprecher war ein Schulprojekt von der BVJ Technik und Informatik.
+          Alle Schülerinnen und Schüler hatten die Möglichkeit, einen zu bauen, aber nicht alle haben es geschafft.
+          Alles von 0 bis 100 ist selber gemacht, das Gehäuse habe ich im Holzbearbeitungsunterricht zusammengebaut,
+          die Elektronikteile sind auch von mir gelötet und zusammengestellt, die Programmierung habe ich ebenfalls
+          selber erledigt.
+        </p>
+        
+
+        <figure style="text-align: center">
+          <center>
+            <img src="img/Lautsprecher.jpg" width="auto" height="auto" style="max-width:50vw; "/>
+          </center>
+          <figcaption>Bluetooth Lautsprecher</figcaption>
+        </figure>
+
+        <center><h4>Demo Video</h4></center>
+        <center>
+          <iframe
+            width="200"
+            height="300"
+            src="https://www.youtube.com/embed/iDlRrrQ0rgE?si=gFrtXU-v6_k6ap6h"
+                
+            allowfullscreen
+          ></iframe>
+        </center>
+        <br />
+        <center>
+          <a
+            class="fullscreenytshort"
+            href="https://www.youtube.com/embed/iDlRrrQ0rgE?si=gFrtXU-v6_k6ap6h"
+            target="_blank"
+            >Watch fullscreen</a
+          >
+        </center>
+        <br />
+      </details>
+      <br>
+      <details id="python-snake">
+        <summary>Python Snake Game</summary>
+
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Python ist der Kopf meines Spiels, die gesamte Logik wird von ihm
+          übernommen. Alles, was mit Rechnen oder Inputs und Outputs zu tun hat,
+          wird mit Hilfe von Python erledigt. Tkinter ist mein GUI (Graphical
+          User Interface). Es hat mir ermöglicht, Figuren zu erstellen, eine Map
+          zu zeichnen und Farben hinzuzufügen. Grob gesagt, habe ich mit Tkinter
+          meinen Python-Code zum Leben erweckt.
+        </p>
+        <center><h4>Gameplay</h4></center>
+        <p>
+          Das Gameplay folgt jedem klassischen Snake-Spiel. Man muss so viel wie
+          möglich essen, um Punkte zu sammeln und länger zu werden. Gleichzeitig
+          muss man darauf achten, nicht gegen die Wände oder sich selbst zu
+          stossen, sonst wird man verlieren! Das Spiel ist am Anfang langsam,
+          aber später werden mehrere Nahrungsmittel auf der Karte erscheinen, um
+          den Fortschritt zu beschleunigen.
+        </p>
+        <div class="snakejpg">
+          <figure>
+            <center>
+              <img src="img/SnankeGameSS.jpg" width="350" height="400" />
+            </center>
+            <figcaption>Snake Game Gameplay</figcaption>
+          </figure>
+        </div>
+        <center><h4>Demo Video</h4></center>
+        <center>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/qVap_Mrzueg?start=0"
+            allowfullscreen
+          ></iframe>
+        </center>
+      </details>
+
+      <br />
+
+      <details id="tic-tac-toe">
+        <summary>Tic-Tac-Toe-Spiel</summary>
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Dieses Spiel habe ich in der Schule gemacht. Dort arbeiten
+          wir viel mit HTML, CSS, JavaScript und wahrscheinlich in Zukunft auch
+          mit weiteren Sprachen und Programmen. Das ursprüngliche Spiel war
+          jedoch sehr rudimentär und benötigte zwei Personen zum Spielen. Ich
+          habe es weiterentwickelt, sodass man nun auch alleine gegen einen
+          Algorithmus spielen kann.
+        </p>
+        <a class="tictacbutton" href="tictactoe.html">Spielen</a>
+      </details>
+
+      <br />
+      <details id="vier-gewinnt">
+        <summary>Vier Gewinnt</summary>
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Vier Gewinnt ist auch ein Spiel, das wir in der Schule gemacht haben.
+          Mein Kollege sagt, dass es ein berühmtes Spiel ist, nicht nur in der
+          Schweiz, sondern in allen deutschsprachigen Ländern. Zum Spielen
+          braucht man diesmal zwei Spieler.
+        </p>
+        <a class="tictacbutton" href="viergewinnt.html">Spielen</a>
+      </details>
+
+      <br />
+
+      <details id="javascript-taschenrechner">
+        <summary>JavaScript-Taschenrechner</summary>
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Ein Taschenrechner, der heimlich im Web verwendet werden kann. Die
+          grafischen Aspekte sind mit HTML und CSS gestaltet, und die Funktionen
+          sind mit JavaScript programmiert.
+        </p>
+        <a class="tictacbutton" href="calc.html">Benutzen</a>
+      </details>
+
+      <br />
+
+      <details id="mobile-game">
+        <summary>Mobile Game</summary>
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Das Online-Tool Thunkable habe ich benutzt, um die Mobile-App zu
+          erstellen. Mit der GUI von Thunkable habe ich mehrere Seiten erstellt
+          und Knöpfe hinzugefügt, um die ganze App zu gestalten. Der wichtigste
+          Teil aber ist der GameScreen, wo das Gameplay stattfindet. Dort habe
+          ich viele Logikblöcke verwendet, um die Logik des Spiels zu erstellen. Stellen
+          Sie sich Scratch vor, aber komplexer.
+        </p>
+        <center><h4>Gameplay</h4></center>
+        <p>
+          Man muss die blaue Plattform ziehen und den Ball ins gegnerische Tor
+          schiessen, während man sein eigenes Tor verteidigt. Der Gegner ist
+          autonom und schiesst zurück und blockiert die Schüsse. Wer zuerst zehn
+          Tore erreicht, gewinnt.
+        </p>
+        <center><h4>Unerwartete Hindernisse</h4></center>
+        <p>
+          Ursprünglich hatte ich geplant, das Spiel zum Testen bereitzustellen,
+          aber Thunkable bietet nur sehr eingeschränkte Funktionen und verlangt
+          gleichzeitig ein teures Abonnement. Ausserdem ist die Leistung sehr
+          instabil, weshalb ich das Spiel nur durch Bilder und Videos
+          präsentieren kann.
+        </p>
+
+        <div
+          class="ball-pics"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+          "
+        >
+          <figure style="margin: 0; padding: 0; text-align: center">
+            <img src="img/BallMenu.jpg" width="auto" height="auto" style="max-width: 30vw;" />
+            <figcaption>Hauptmenü</figcaption>
+          </figure>
+          <figure
+            style="margin: 0; padding: 0; text-align: center; margin-top: 10px"
+          >
+            <img src="img/BallGameplay.jpg" width="auto" height="auto" style="max-width: 30vw;" />
+            <figcaption>Gameplay</figcaption>
+          </figure>
+          <figure style="margin: 0; padding: 0; text-align: center">
+            <img
+              src="img/LogicBlocks.png"
+              width="auto"
+              height="auto"
+              style="margin-top: 10px; max-width: 50vw;"
+            />
+            <figcaption>Logikblöcke</figcaption>
+          </figure>
+        </div>
+
+        <center><h4>Demo Video</h4></center>
+        <center>
+          <iframe
+            width="200"
+            height="300"
+            src="https://www.youtube.com/embed/YkvRLIebK0k"
+            allowfullscreen
+          ></iframe>
+        </center>
+        <br />
+        <center>
+          <a
+            class="fullscreenytshort"
+            href="https://www.youtube.com/watch?v=YkvRLIebK0k"
+            target="_blank"
+            >Watch fullscreen</a
+          >
+        </center>
+        <br />
+      </details>
+
+      <br />
+
+      <details id="python-taschenrechner">
+        <summary>Python-Taschenrechner</summary>
+        <center><h4>Aufbau</h4></center>
+        <p>
+          Python ist das Gehirn meines Taschenrechners. Der gesamte Code ist
+          damit geschrieben. Der gesamte Input geht hinein, alle Operationen
+          werden darin ausgeführt und der gesamte Output kommt von ihm. Tkinter
+          ist die Bibliothek, die ich benutzt habe, um die GUI (Graphical User
+          Interface) zu erstellen. Zuerst habe ich ein Fenster erstellt, indem
+          ich Knöpfe hinzugefügt habe. Danach habe ich jedem Knopf eine Funktion
+          gegeben und zum Schluss habe ich alles schön formatiert.
+        </p>
+        <center><h4>Verwendung</h4></center>
+        <p>
+          Mit dem Taschenrechner kann man viele Operationen ausführen, nämlich:
+        </p>
+        <ul style="color: black; font-weight: bold; font-size: 16px">
+          <li>Addition</li>
+          <li>Subtraktion</li>
+          <li>Multiplikation</li>
+          <li>Division</li>
+          <li>Potenzierung</li>
+          <li>Wurzelziehen</li>
+          <li>Prozentrechnen</li>
+        </ul>
+        <figure style="text-align: center">
+          <center>
+            <img src="img/CalculatorSS.jpg" width="auto" height="auto" />
+          </center>
+          <figcaption>Taschenrechner</figcaption>
+        </figure>
+        <center><h4>Demo Video</h4></center>
+
+        <center>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube.com/embed/kD2_w2tpYr8"
+            allowfullscreen
+          ></iframe>
+        </center>
+      </details>
+
+      <br />
+      <details id="portfolio-webseite">
+        <summary>Portfolio-Webseite</summary>
+        <p>
+          Mein letztes Projekt, für das ich am meisten Zeit investiert habe, ist
+          diese Webseite hier. Sie mag einfach sein, aber Schönheit liegt oft in
+          der Einfachheit. Die Benutzeroberfläche ist übersichtlich und das
+          Design durchdacht. Am wichtigsten ist jedoch, dass die Webseite
+          responsiv ist. Das bedeutet, dass sie auf jedem Gerät gut aussieht,
+          egal ob Tablet, Laptop, PC oder Smartphone. Ich habe viele Stunden
+          gebraucht, um sie von Grund auf zu erstellen, aber dabei habe ich viel
+          gelernt.
+        </p>
+      </details>
+
+      <br />
+
+      <details id="zukuenftige-projekte">
+        <summary>Zukünftige Projekte</summary>
+        <p>
+          Momentan arbeite ich an einer neuen Webseite, auf der man Deutsch
+          lernen und üben kann. Ich würde es als meine eigene Version von
+          "ANTON" beschreiben. Es braucht viel mehr JavaScript als ich bisher
+          verwendet habe, da die Webseite völlig interaktiv sein muss. In der
+          Zukunft plane ich, mehrere Schulfächer wie Englisch und Mathematik
+          hinzuzufügen, eventuell werde ich auch ein Backend brauchen, um meinen
+          Plan einer vollständig funktionierenden Bildungswebseite zu
+          realisieren.
+        </p>
+
+        <figure style="text-align: center">
+          <center>
+            <img src="img/AlphaWebseite.png" width="auto" height="auto" style="max-width:60vw; "/>
+          </center>
+          <figcaption>Alpha Version</figcaption>
+        </figure>
+
+      </details>
+    </div>
+
+    <br />
+
+    <div class="navbar1">
+      <div style="display: flex">
+        <span class="material-symbols--stacked-email-rounded"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="mailto:Shirzadali.kontakt@gmail.com">
+            shirzadali.kontakt@gmail.com</a
+          >
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <span class="solar--phone-calling-bold"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="tel: +41 77 917 67 49"> +41 77 917 67 49 </a>
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <span class="mingcute--location-2-fill"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="https://maps.app.goo.gl/h2aERwzxVBSbZ8fw6"
+            >8050 Zürich</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
