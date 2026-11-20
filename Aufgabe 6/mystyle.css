@@ -1,0 +1,62 @@
+.map, table, td{
+    display: flex;
+    border: solid black 4px;
+    border-collapse: collapse;
+    padding: 4px;
+    background-color: black;   
+}
+
+.map{
+    
+}
+
+
+body{
+    background-color: rgb(115, 163, 246);
+}
+
+
+.buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+   border: solid black 2px;
+   margin-bottom: 4px;
+   border-radius: 5px;
+    
+}
+
+.blauwinbtn:hover{
+    background-color: orange;
+}
+.rotwinbtn:hover{
+    background-color: black;
+}
+.resetbtn:hover{
+    background-color: yellow;
+}
+
+.blauwinbtn{
+    color: blue;
+    border-color: blue;
+}
+
+.rotwinbtn {
+    color: red;
+    border-color: red;
+    
+}
+
+.resetbtn {
+    color: purple;
+    border-color: purple;
+}
+h2{
+    border:ridge orange 4px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px;
+
+}

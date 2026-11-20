@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon_web.png" />
+    <title>Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html">
+        <img
+          src="img/HomeIcon.png"
+          height="36px"
+          width="32px"
+          style="padding-top: 5px; border: none; outline: none"
+      /></a>
+      <a href="vorstellung.html"><button class="nav-btn">Über mich</button></a>
+      <div class="dropdown-projekt">
+        <a href="portfolio.html"><button class="nav-btn">Projekte</button></a>
+        <ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+          <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+          <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+          <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+          <li><a href="portfolio.html#tic-tac-toe">Tic-Tac-Toe-Spiel</a></li>
+          <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+          <li>
+            <a href="portfolio.html#javascript-taschenrechner"
+              >JavaScript-Taschenrechner</a
+            >
+          </li>
+          <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+          <li>
+            <a href="portfolio.html#python-taschenrechner"
+              >Python-Taschenrechner</a
+            >
+          </li>
+          <li>
+            <a href="portfolio.html#portfolio-webseite">Portfolio-Webseite</a>
+          </li>
+          <li>
+            <a href="portfolio.html#zukuenftige-projekte"
+              >Zukünftige Projekte</a
+            >
+          </li>
+        </ul>
+      </div>
+      <a href="lebenslauf.html"><button class="nav-btn">Lebenslauf</button></a>
+    </div>
+    <div class="viergewinnt-mode-bar">
+      <a class="nav-btn viergewinnt-mode" href="viergewinnt-ohne-schwerkraft.html">Ohne Schwerkraft spielen</a>
+    </div>
+    <center><h2>Vier Gewinnt</h2></center>
+    <table class="map">
+      
+        
+    
+      <tr onmouseover="highlight(this)" id="1" onmouseleave="unhighlight(this)" onclick="check(1)">
+        <td >
+          <img id="16" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="15" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="14" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="13" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="12" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="11" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" id="2" onmouseleave="unhighlight(this)" onclick="check(2)">
+        <td >
+          <img id="26" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="25" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="24" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="23" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="22" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="21" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" id="3" onmouseleave="unhighlight(this)" onclick="check(3)">
+        <td >
+          <img id="36" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="35" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="34" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="33" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="32" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="31" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" onmouseleave="unhighlight(this)" id="4" onclick="check(4)">
+        <td >
+          <img id="46" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="45" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="44" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="43" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="42" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="41" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" onmouseleave="unhighlight(this)" id="5" onclick="check(5)">
+        <td >
+          <img id="56" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="55" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="54" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="53" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="52" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="51" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" onmouseleave="unhighlight(this)" id="6" onclick="check(6)">
+        <td >
+          <img id="66" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="65" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="64" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="63" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="62" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="61" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" id="7" onmouseleave="unhighlight(this)" onclick="check(7)">
+        <td >
+          <img id="76" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="75" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="74" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="73" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="72" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="71" src="img/Weiss.jpg" />
+        </td>
+
+        
+        
+      </tr>
+    </table>
+    <br />
+
+    <div class="buttons4">
+      <button class="resetbtn1" type="button" onclick="reset()">Reset</button>
+      <button class="scorereset" type="button" onclick="resetscore()">
+        Score zurücksetzen
+      </button>
+      <br />
+      <br />
+      <button class="rotwinbtn" type="button" onclick="rotwin()">
+        Rot gewinnt
+      </button>
+      <button class="blauwinbtn" type="button" onclick="blauwin()">
+        Blau gewinnt
+      </button>
+    </div>
+    <div style="text-align: center">
+      <h4
+        style="
+          border: ridge 3px red;
+          display: inline-block;
+          padding: 3px;
+          color: rgba(255, 0, 0, 0.7);
+        "
+        id="rotscore"
+      >
+        Rot: 0
+      </h4>
+      <h4
+        style="
+          border: ridge 3px blue;
+          display: inline-block;
+          padding: 3px;
+          color: rgba(0, 0, 255, 0.7);
+        "
+        id="blauscore"
+      >
+        Blau: 0
+      </h4>
+    </div>
+
+    <div class="navbar1">
+      <div style="display: flex">
+        <span class="material-symbols--stacked-email-rounded"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="mailto:Shirzadali.kontakt@gmail.com">
+            shirzadali.kontakt@gmail.com</a
+          >
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <span class="solar--phone-calling-bold"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="tel: +41 77 917 67 49">
+            +41 77 917 67 49
+          </a>
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <span class="mingcute--location-2-fill"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="https://maps.app.goo.gl/h2aERwzxVBSbZ8fw6"
+            >8050 Zürich</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    var win = 0;
+    function rotwin() {
+      win++;
+      document.getElementById("rotscore").innerHTML = "Rot: " + win;
+    }
+
+    var win1 = 0;
+    function blauwin() {
+      win1++;
+      document.getElementById("blauscore").innerHTML = "Blau: " + win1;
+    }
+
+    function resetscore() {
+      win = 0;
+      win1 = 0;
+      document.getElementById("rotscore").innerHTML = "Rot: 0";
+      document.getElementById("blauscore").innerHTML = "Blau: 0";
+    }
+
+    function isPrime(n) {
+      if (n < 2) return false;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    var turncounter = 0;
+    function reset() {
+      for (const cell of document.querySelectorAll(".map img")) {
+        cell.src = "img/Weiss.jpg";
+      }
+      Spieler = "Red";
+    }
+    var Spieler = "Red";
+    var Smallest = 0;
+    const compare = [
+
+    ];
+    
+
+
+
+    function check(ColumnNr){
+        console.log(ColumnNr);
+        compare.length= 0;
+    for (let i=ColumnNr *10 + 1; i < ColumnNr*10 + 7; i++){
+        if(document.getElementById(i).getAttribute("src") === "img/Weiss.jpg"){
+        compare.push(i);
+        }
+
+    }
+    if (compare.length === 0) return;
+    Smallest = Math.min(...compare);
+    console.log(Smallest);
+    if (Spieler == "Red") {
+        Spieler = "Blue";
+        document.getElementById(Smallest).src= "img/Rot.png";
+      }
+      else if (Spieler == "Blue") {
+        Spieler = "Red";
+        document.getElementById(Smallest).src= "img/Blau.png";
+      }
+
+    }
+
+  </script>
+  <script src="viergewinnt-highlight.js"></script>
+</html>
