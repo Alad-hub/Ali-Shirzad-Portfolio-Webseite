@@ -1,240 +1,345 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-<meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="img/favicon_web.png">
+    <link rel="icon" type="image/png" href="img/favicon_web.png" />
     <title>Portfolio</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="navbar">
       <a href="index.html">
         <img
           src="img/HomeIcon.png"
           height="36px"
           width="32px"
-          style="padding-top: 5px; border: none; outline: none"/></a>
-      <a href="vorstellung.html"
-        ><button class="nav-btn">Über mich</button></a>
+          style="padding-top: 5px; border: none; outline: none"
+      /></a>
+      <a href="vorstellung.html"><button class="nav-btn">Über mich</button></a>
       <div class="dropdown-projekt">
-<a href="portfolio.html"><button class="nav-btn">Projekte</button></a>
-<ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
-  <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
-  <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
-  <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
-  <li><a href="portfolio.html#tic-tac-toe">Tic-Tac-Toe-Spiel</a></li>
-  <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
-  <li><a href="portfolio.html#javascript-taschenrechner">JavaScript-Taschenrechner</a></li>
-  <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
-  <li><a href="portfolio.html#python-taschenrechner">Python-Taschenrechner</a></li>
-  <li><a href="portfolio.html#portfolio-webseite">Portfolio-Webseite</a></li>
-  <li><a href="portfolio.html#zukuenftige-projekte">Zukünftige Projekte</a></li>
-</ul>
-</div>
+        <a href="portfolio.html"><button class="nav-btn">Projekte</button></a>
+        <ul class="dropdwon-projekt-content" aria-label="Alle Projekte">
+          <li><a href="portfolio.html#ultrarain">UltraRain</a></li>
+          <li><a href="portfolio.html#lautsprecher">DIY Lautsprecher</a></li>
+          <li><a href="portfolio.html#python-snake">Python Snake Game</a></li>
+          <li><a href="portfolio.html#tic-tac-toe">Tic-Tac-Toe-Spiel</a></li>
+          <li><a href="portfolio.html#vier-gewinnt">Vier Gewinnt</a></li>
+          <li>
+            <a href="portfolio.html#javascript-taschenrechner"
+              >JavaScript-Taschenrechner</a
+            >
+          </li>
+          <li><a href="portfolio.html#mobile-game">Mobile Game</a></li>
+          <li>
+            <a href="portfolio.html#python-taschenrechner"
+              >Python-Taschenrechner</a
+            >
+          </li>
+          <li>
+            <a href="portfolio.html#portfolio-webseite">Portfolio-Webseite</a>
+          </li>
+          <li>
+            <a href="portfolio.html#zukuenftige-projekte"
+              >Zukünftige Projekte</a
+            >
+          </li>
+        </ul>
+      </div>
       <a href="lebenslauf.html"><button class="nav-btn">Lebenslauf</button></a>
     </div>
+    <div class="viergewinnt-mode-bar">
+      <a class="nav-btn viergewinnt-mode" href="viergewinnt-ohne-schwerkraft.html">Ohne Schwerkraft spielen</a>
+    </div>
     <center><h2>Vier Gewinnt</h2></center>
-    <div class="map">
-    <table>
-        <tr>
-        <td onclick="switchSpieler(1)"><img id= "spielfeld1"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(2)"><img id= "spielfeld2"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(3)"><img id= "spielfeld3"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(4)"><img id= "spielfeld4"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(5)"><img id= "spielfeld5"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(6)"><img id= "spielfeld6"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(7)"><img id= "spielfeld7"src="img/violet.jpg"
-            ></td>
+    <table class="map">
+      
+        
+    
+      <tr onmouseover="highlight(this)" id="1" onmouseleave="unhighlight(this)" onclick="check(1)">
+        <td >
+          <img id="16" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="15" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="14" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="13" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="12" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="11" src="img/Weiss.jpg" />
+        </td>
 
-    </tr>
-    <tr>
-        <td onclick="switchSpieler(8)"><img id= "spielfeld8"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(9)"><img id= "spielfeld9"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(10)"><img id= "spielfeld10"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(11)"><img id= "spielfeld11"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(12)"><img id= "spielfeld12"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(13)"><img id= "spielfeld13"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(14)"><img id= "spielfeld14"src="img/violet.jpg"
-            ></td>
-    </tr>
-    <tr>
-        <td onclick="switchSpieler(15)"><img id= "spielfeld15"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(16)"><img id= "spielfeld16"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(17)"><img id= "spielfeld17"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(18)"><img id= "spielfeld18"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(19)"><img id= "spielfeld19"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(20)"><img id= "spielfeld20"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(21)"><img id= "spielfeld21"src="img/violet.jpg"
-            ></td>
-    </tr>
-    <tr>
-        <td onclick="switchSpieler(22)"><img id= "spielfeld22"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(23)"><img id= "spielfeld23"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(24)"><img id= "spielfeld24"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(25)"><img id= "spielfeld25"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(26)"><img id= "spielfeld26"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(27)"><img id= "spielfeld27"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(28)"><img id= "spielfeld28"src="img/violet.jpg"
-            ></td>
+        <tr onmouseover="highlight(this)" id="2" onmouseleave="unhighlight(this)" onclick="check(2)">
+        <td >
+          <img id="26" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="25" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="24" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="23" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="22" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="21" src="img/Weiss.jpg" />
+        </td>
 
-    </tr>
-    <tr>
-        <td onclick="switchSpieler(29)"><img id= "spielfeld29"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(30)"><img id= "spielfeld30"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(31)"><img id= "spielfeld31"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(32)"><img id= "spielfeld32"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(33)"><img id= "spielfeld33"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(34)"><img id= "spielfeld34"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(35)"><img id= "spielfeld35"src="img/violet.jpg"
-            ></td>
-    </tr>
-    <tr>
-        <td onclick="switchSpieler(36)"><img id= "spielfeld36"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(37)"><img id= "spielfeld37"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(38)"><img id= "spielfeld38"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(39)"><img id= "spielfeld39"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(40)"><img id= "spielfeld40"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(41)"><img id= "spielfeld41"src="img/violet.jpg"
-            ></td>
-        <td onclick="switchSpieler(42)"><img id= "spielfeld42"src="img/violet.jpg"
-            ></td>
-    </tr>
+        <tr onmouseover="highlight(this)" id="3" onmouseleave="unhighlight(this)" onclick="check(3)">
+        <td >
+          <img id="36" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="35" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="34" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="33" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="32" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="31" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" onmouseleave="unhighlight(this)" id="4" onclick="check(4)">
+        <td >
+          <img id="46" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="45" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="44" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="43" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="42" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="41" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" onmouseleave="unhighlight(this)" id="5" onclick="check(5)">
+        <td >
+          <img id="56" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="55" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="54" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="53" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="52" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="51" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" onmouseleave="unhighlight(this)" id="6" onclick="check(6)">
+        <td >
+          <img id="66" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="65" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="64" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="63" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="62" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="61" src="img/Weiss.jpg" />
+        </td>
+
+        <tr onmouseover="highlight(this)" id="7" onmouseleave="unhighlight(this)" onclick="check(7)">
+        <td >
+          <img id="76" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="75" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="74" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="73" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="72" src="img/Weiss.jpg" />
+        </td>
+        <td >
+          <img id="71" src="img/Weiss.jpg" />
+        </td>
+
+        
+        
+      </tr>
     </table>
-    </div> 
-    <br>
-
+    <br />
 
     <div class="buttons4">
-    <button class="resetbtn1" type="button" onclick="reset()">Reset</button>
-    <button class="scorereset" type="button" onclick="resetscore()">Score zurücksetzen</button>
-    <br>
-    <br>
-    <button class="rotwinbtn" type="button" onclick="rotwin()">Rot gewinnt</button>
-    <button class="blauwinbtn" type="button" onclick="blauwin()">Blau gewinnt</button>
-    
+      <button class="resetbtn1" type="button" onclick="reset()">Reset</button>
+      <button class="scorereset" type="button" onclick="resetscore()">
+        Score zurücksetzen
+      </button>
+      <br />
+      <br />
+      <button class="rotwinbtn" type="button" onclick="rotwin()">
+        Rot gewinnt
+      </button>
+      <button class="blauwinbtn" type="button" onclick="blauwin()">
+        Blau gewinnt
+      </button>
     </div>
-    <div style="text-align: center;">
-    <h4 style="border:ridge 3px red; display: inline-block; padding: 3px; color: rgba(255, 0, 0, 0.7);" id="rotscore">Rot: 0</h4>
-    <h4 style="border:ridge 3px blue; display: inline-block; padding: 3px; color: rgba(0, 0, 255, 0.7);" id="blauscore">Blau: 0</h4>
+    <div style="text-align: center">
+      <h4
+        style="
+          border: ridge 3px red;
+          display: inline-block;
+          padding: 3px;
+          color: rgba(255, 0, 0, 0.7);
+        "
+        id="rotscore"
+      >
+        Rot: 0
+      </h4>
+      <h4
+        style="
+          border: ridge 3px blue;
+          display: inline-block;
+          padding: 3px;
+          color: rgba(0, 0, 255, 0.7);
+        "
+        id="blauscore"
+      >
+        Blau: 0
+      </h4>
     </div>
 
-     <script>
-        var win= 0
-        function rotwin(){
-            win ++;
-            document.getElementById("rotscore").innerHTML = ("Rot: " + win);
-        }
+    <div class="navbar1">
+      <div style="display: flex">
+        <span class="material-symbols--stacked-email-rounded"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="mailto:Shirzadali.kontakt@gmail.com">
+            shirzadali.kontakt@gmail.com</a
+          >
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <span class="solar--phone-calling-bold"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="tel: +41 77 917 67 49">
+            +41 77 917 67 49
+          </a>
+        </p>
+      </div>
+
+      <div style="display: flex">
+        <span class="mingcute--location-2-fill"></span>
+        <p class="nav-btn1" style="margin-left: 1px">
+          <a class="location" href="https://maps.app.goo.gl/h2aERwzxVBSbZ8fw6"
+            >8050 Zürich</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    var win = 0;
+    function rotwin() {
+      win++;
+      document.getElementById("rotscore").innerHTML = "Rot: " + win;
+    }
+
+    var win1 = 0;
+    function blauwin() {
+      win1++;
+      document.getElementById("blauscore").innerHTML = "Blau: " + win1;
+    }
+
+    function resetscore() {
+      win = 0;
+      win1 = 0;
+      document.getElementById("rotscore").innerHTML = "Rot: 0";
+      document.getElementById("blauscore").innerHTML = "Blau: 0";
+    }
+
+    function isPrime(n) {
+      if (n < 2) return false;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    var turncounter = 0;
+    function reset() {
+      for (const cell of document.querySelectorAll(".map img")) {
+        cell.src = "img/Weiss.jpg";
+      }
+      Spieler = "Red";
+    }
+    var Spieler = "Red";
+    var Smallest = 0;
+    const compare = [
+
+    ];
     
-        var win1= 0
-        function blauwin(){
-            win1 ++;
-            document.getElementById("blauscore").innerHTML = ("Blau: " + win1);
-        }
-    
-   
-        function resetscore(){
-            document.getElementById("rotscore").innerHTML = "Rot: 0";
-            document.getElementById("blauscore").innerHTML = "Blau: 0";
-        }
 
-                function isPrime(n) {
-        if (n < 2) return false;
-        for (let i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i === 0) return false;
-        }
-        return true;
+
+
+    function check(ColumnNr){
+        console.log(ColumnNr);
+        compare.length= 0;
+    for (let i=ColumnNr *10 + 1; i < ColumnNr*10 + 7; i++){
+        if(document.getElementById(i).getAttribute("src") === "img/Weiss.jpg"){
+        compare.push(i);
         }
 
+    }
+    if (compare.length === 0) return;
+    Smallest = Math.min(...compare);
+    console.log(Smallest);
+    if (Spieler == "Red") {
+        Spieler = "Blue";
+        document.getElementById(Smallest).src= "img/Rot.png";
+      }
+      else if (Spieler == "Blue") {
+        Spieler = "Red";
+        document.getElementById(Smallest).src= "img/Blau.png";
+      }
 
-        var turncounter = 0;
-        function reset(){
-            for(var nr =1; nr<=42; nr++){
-                document.getElementById("spielfeld"+nr).src = "img/violet.jpg";
-                 
-            }
-            
-            
+    }
 
-
-        }
-        var Spieler = "Red";
-
-        function switchSpieler(zellnr){
-           if (Spieler == "Red"){
-            document.getElementById("spielfeld" + zellnr).src= "img/Rot.png";
-            Spieler = "Blue";
-        }
-          else if (Spieler == "Blue"){
-             document.getElementById("spielfeld" + zellnr).src= "img/Blau.png";
-             Spieler = "Red";
-
-          }
-        }
-    </script>
-
-<div class="navbar1">
-		<div style="display:flex;">
-			<span class="material-symbols--stacked-email-rounded"></span>
-			<p class="nav-btn1" style="margin-left:1px">
-				<a class="location" href="mailto:Shirzadali.kontakt@gmail.com">
-					shirzadali.kontakt@gmail.com</a></p>
-
-		</div>
-		
-
-		<div style="display:flex;">
-			<span class="solar--phone-calling-bold"></span>
-			<p class="nav-btn1" style="margin-left:1px;"> <a class="location" href="tel: +41 77 917 67 49">
-				+41 77 917 67 49
-			</a></p>
-		</div>
-
-		<div style="display:flex;">
-			<span class="mingcute--location-2-fill"></span>
-			<p class="nav-btn1" style="margin-left:1px;"><a class="location"
-			href="https://maps.app.goo.gl/h2aERwzxVBSbZ8fw6">8050 Zürich</a></p>
-		</div>
-	</div>
-</body>
-
-
-
-
+  </script>
+  <script src="viergewinnt-highlight.js"></script>
 </html>

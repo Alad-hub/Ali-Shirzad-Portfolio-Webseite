@@ -172,27 +172,106 @@ summary:hover {
   
   }
 
-.map{
-  img{
-    all: unset;
-  }
-
+.viergewinnt-mode-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
 }
-  
 
-.map, table, td{
-  width:fit-content;
-  border: black;
-  background-color: black;
-  padding: 2px;
+.viergewinnt-mode {
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-btn.viergewinnt-mode:is(:hover, :focus-visible, :active) {
+  background-color: #003366;
+  color: white;
+}
+
+.viergewinnt-free {
+  width: 410px;
+  max-width: 100%;
+  table-layout: fixed;
   margin: auto;
+  padding: 2px;
   border-radius: 10px;
-
-  img{
-    width:50px;
-    height: 50px;
-  }
+  background-color: black;
 }
+
+.viergewinnt-free td {
+  padding: 3px;
+  background-color: black;
+  border: 0;
+}
+
+.viergewinnt-free td.highlighted {
+  background-color: violet;
+}
+
+.viergewinnt-free img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border: 0;
+}
+
+.map{
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  border-radius: 10px;
+  width: 416px;
+  max-width: 100%;
+  margin-inline: auto;
+  
+}
+.map tbody{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px; 
+  
+  
+}
+.map tr{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  
+}
+
+.map tr.highlighted {
+    background-color: violet;
+}
+
+
+.map td{
+  width: 100%;
+  padding: 1px;
+  background-color: black;
+  border-color: black;
+  border-radius: 10px; 
+  margin: auto;
+  border: solid black 3px;
+  
+  
+}
+
+.map  img{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  
+}
+
+
 
 .buttons4{
   text-align: center;
@@ -635,15 +714,6 @@ summary:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  .map{
-    
-
-  table, td, img{
-    width:40px;
-    height: 40px;
-  }
-}
-
   .lebenslauf{
     max-width: 90%;
     width: auto;
